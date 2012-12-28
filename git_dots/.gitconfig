@@ -1,0 +1,33 @@
+[user]
+	name = Jonathan Jackson
+	email = jonj@promedicalinc.com
+[alias]
+        br = branch
+        st = status
+	co = checkout
+        ci = commit
+        aa = add --all
+        pom = push origin master
+        dc = diff --cached
+        di = diff
+        pullff = pull --ff-only
+        amend = commit --amend
+        head = !git l -1
+        h = !git head
+        hp = "!. ~/.githelpers && show_git_head"
+        r = !git l -30
+        ra = !git r --all
+        l = "!. ~/.githelpers && pretty_git_log"
+        la = !git l --all
+[color]
+        ui = auto
+[core]
+	excludesfile = /Users/jjackson/.gitignore
+	editor = vim
+[apply]
+	whitespace = nowarn
+[format]
+	pretty = %C(yellow)%h%Creset %s
+[github]
+	user = rondale-sc
+	email = jonathan.jackson1@me.com
