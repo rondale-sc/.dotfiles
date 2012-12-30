@@ -1,10 +1,10 @@
-# grb prompt theme
+# rondale prompt theme
 # copied from wunjo prompt theme and modified
 
 autoload -U zgitinit
 zgitinit
 
-prompt_grb_help () {
+prompt_rondale_help () {
   cat <<'EOF'
 
   prompt rondale
@@ -53,7 +53,7 @@ function minutes_since_last_commit {
     fi
 }
 
-function prompt_grb_scm_time_since_commit() {
+function prompt_rondale_scm_time_since_commit() {
 	local -A pc
 	pc=(${(kv)wunjo_prompt_colors})
 
@@ -76,13 +76,13 @@ function prompt_grb_scm_time_since_commit() {
     fi
 }
 
-function prompt_grb_scm_info() {
+function prompt_rondale_scm_info() {
     if zgit_inworktree; then
         echo "($(prompt_wunjo_scm_branch))"
     fi
 }
 
-prompt_grb_setup() {
+prompt_rondale_setup() {
     local verbose
     if [[ $TERM == screen* ]] && [ -n "$STY" ]; then
       verbose=
