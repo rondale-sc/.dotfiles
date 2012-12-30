@@ -1,9 +1,9 @@
-# wunjo prompt theme
+# rondale prompt theme
 
 autoload -U zgitinit
 zgitinit
 
-prompt_wunjo_help () {
+prompt_rrondalee_help () {
   cat <<'EOF'
 
   prompt rondale
@@ -40,7 +40,7 @@ colorword() {
 	echo "%{"$'\e['${(j:;:)s}m"%}"
 }
 
-prompt_wunjo_setup() {
+prompt_rondale_setup() {
 	local verbose
 	if [[ $TERM == screen* ]] && [ -n "$STY" ]; then
 		verbose=
@@ -106,8 +106,8 @@ prompt_wunjo_setup() {
 	done
 	pc[reset]=$(colorword . . 00)
 
-	typeset -Ag wunjo_prompt_colors
-	wunjo_prompt_colors=(${(kv)pc})
+	typeset -Ag rondale_prompt_colors
+	rondale_prompt_colors=(${(kv)pc})
 
 	local p_date p_line p_rc
 
@@ -120,17 +120,17 @@ prompt_wunjo_setup() {
 		PROMPT+="$pc[host]%m$pc[reset] "
 	fi
 	PROMPT+="$pc[path]%(2~.%~.%/)$pc[reset]"
-	PROMPT+="\$(prompt_wunjo_scm_status)"
+	PROMPT+="\$(prompt_rondale_scm_status)"
 	PROMPT+="%(?.. $pc[rc]exited %1v$pc[reset])"
 	PROMPT+="$pc[shortpath]%1~$pc[reset]"
-	PROMPT+="\$(prompt_wunjo_scm_branch)"
+	PROMPT+="\$(prompt_rondale_scm_branch)"
 	PROMPT+=" $pc[#]%#$pc[reset] "
 
 	export PROMPT RPROMPT
-	precmd_functions+='prompt_wunjo_precmd'
+	precmd_functions+='prompt_rondale_precmd'
 }
 
-prompt_wunjo_precmd() {
+prompt_rondale_precmd() {
 	local ex=$?
 	psvar=()
 
@@ -142,10 +142,10 @@ prompt_wunjo_precmd() {
 	fi
 }
 
-prompt_wunjo_scm_status() {
+prompt_rondale_scm_status() {
 	zgit_isgit || return
 	local -A pc
-	pc=(${(kv)wunjo_prompt_colors})
+	pc=(${(kv)rondale_prompt_colors})
 
 	head=$(zgit_head)
 	gitcommit=$(revstring $head)
@@ -246,10 +246,10 @@ prompt_wunjo_scm_status() {
 	fi
 }
 
-prompt_wunjo_scm_branch() {
+prompt_rondale_scm_branch() {
 	zgit_isgit || return
 	local -A pc
-	pc=(${(kv)wunjo_prompt_colors})
+	pc=(${(kv)rondale_prompt_colors})
 
 	echo -n "$pc[punc]:$pc[scm_branch]$(zgit_head)"
 
@@ -279,6 +279,6 @@ prompt_wunjo_scm_branch() {
 	echo $pc[reset]
 }
 
-prompt_wunjo_setup "$@"
+prompt_rondale_setup "$@"
 
 # vim:set ft=zsh:
