@@ -9,6 +9,10 @@ autoload -Uz promptinit
 promptinit
 prompt rondale
 
+for config_file ($HOME/.zsh/lib/*.zsh); do
+  source $config_file
+done
+  
 setopt histignorealldups sharehistory
 
 autoload -Uz compinit
