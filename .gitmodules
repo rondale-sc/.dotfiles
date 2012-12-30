@@ -1,3 +1,6 @@
 [submodule "vim-creeper"]
 	path = vim-creeper
 	url = https://github.com/rondale-sc/vim-creeper.git
+[submodule ".vim"]
+	path = .vim
+	url = https://github.com/rondale-sc/vim-creeper.git
