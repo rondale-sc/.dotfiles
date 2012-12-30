@@ -6,7 +6,7 @@ zgitinit
 prompt_wunjo_help () {
   cat <<'EOF'
 
-  prompt wunjo
+  prompt rondale
 
 EOF
 }

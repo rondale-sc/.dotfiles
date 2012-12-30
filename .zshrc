@@ -7,7 +7,7 @@ alias ls="ls -lah"
 setopt PROMPT_SUBST
 autoload -Uz promptinit
 promptinit
-prompt wunjo
+prompt rondale
 
 setopt histignorealldups sharehistory
 
