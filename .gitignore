@@ -25,7 +25,6 @@
 /.gdb_history
 /.gem
 /.getmail/gmail.log
-/.getmail/oldmail-pop.gmail.com-995-gary.bernhardt@gmail.com
 /.gnupg
 /.god
 /.heroku
@@ -114,3 +113,4 @@
 *.orig
 *.rej
 *.pyc
+/.irssi/nickserv.users
