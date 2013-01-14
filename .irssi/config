@@ -311,3 +311,7 @@ settings = {
 hilights = (
   { text = "rondale_sc"; color = "%M"; nick = "yes"; word = "yes"; }
 );
+
+ignores = (
+  { level = "JOINS PARTS QUITS" }
+);
